@@ -58,11 +58,9 @@ $matches = [
         <body>
             <ul>
                 <?php foreach ($matches as $match) : ?>
-                    <?php foreach ($match as $teams) : ?>
-                        <li>
-                            <?= $teams['home'] . -$teams['guest'] .  $teams['home_score'] - $teams['guest_score'] ?> 
-                        </li>
-                    <?php endforeach ?>
+                    <li>
+                        <?= "{$match['home']} - {$match['guest']}" ?> | <?= "{$match['home_score']} - {$match['guest_score']}" ?> 
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </body>
