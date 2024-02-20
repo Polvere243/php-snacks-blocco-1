@@ -1,10 +1,10 @@
 <?php
 
-    $user_name = $_GET('name');
+    $user_name = $_GET['name'];
 
-    $email_address = $_GET('email');
+    $email_address = $_GET['email'];
 
-    $age = $_GET('age');
+    $age = $_GET['age'];
 
     if(!count($_GET) && mb_strlen($user_name) < 3) {
         echo 'Accesso negato';
