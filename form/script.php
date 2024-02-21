@@ -8,11 +8,11 @@
 
     $age = $_GET['age'] ?? '';
 
-    $is_name_invalid = !count($_Get) || !mb_strlen($name) < 3;
+    $is_name_invalid = !empty($_Get) || !mb_strlen($name);
     
-    $is_email_invalid = !count($_Get) || !str_contains($email, "@", ".") < 3;
+    $is_email_invalid = !empty($_Get) || !str_contains($email, "@") && !str_contains($email, ".");
     
-    $is_age_invalid = !count($_Get) || !mb_strlen($name) < 3;
+    $is_age_invalid = !empty($_Get) || !mb_strlen($name);
 
     $is_invalid = $is_name_invalid || $is_email_invalid || $is_age_invalid;
 
