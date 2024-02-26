@@ -1,12 +1,13 @@
 <?php
-    $text = [
-        'paragraph' => '<p> Non ci saranno sventolii di bacchette o stupidi incantesimi in questo corso.</p>',
-        '<p>Con ciò, non mi aspetto che molti voi capiscano la sottile scienza e l\'esatta arte del preparare pozioni.</p>',
-        '<p> Comunque ai pochi, scelti dal fato, che possiedono la predisposizione,</p>',
-        '<p> Io posso insegnare come stregare la mente, irretire i sensi.</p>',
-        '<p> Io posso insegnarvi come imbottigliare la fama, prontare la gloria, finanche a emettere un fermo alla morte.</p>'
-    ];
     
+        $paragraph = 'Non ci saranno sventolii di bacchette o stupidi incantesimi in questo co
+        Con ciò, non mi aspetto che molti voi capiscano la sottile scienza e l\'esatta arte del preparare pozioni.
+        Comunque ai pochi, scelti dal fato, che possiedono la predisposizione,
+        Io posso insegnare come stregare la mente, irretire i sensi.
+        Io posso insegnarvi come imbottigliare la fama, prontare la gloria, finanche a emettere un fermo alla morte.';
+    
+
+        $paragraphs = explode('.', $paragraph);
     ?>
 
     <!DOCTYPE html>
@@ -18,11 +19,11 @@
     </head>
     <body>
         <div>
-            <p><?php foreach () :
-                 $split_paragraph = $text['paragraph']['key'];
-                explode('.', $split_paragraph);
-                 endfor ?>
-            </p> 
+            <?php foreach ($paragraphs as $paragraph) : ?>
+                <p>
+                    <?= $paragraph ?>.
+                </p> 
+            <?php endforeach; ?>
         </div>
     </body>
     </html>
